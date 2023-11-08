@@ -6,19 +6,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-image: url("./img/vertical-shot-beautiful-diamond-ring-white-surface.jpg");
+  background-image: url("./img/emerald-gemstone-ring-collage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  backdrop-filter: blur(5px);
   height: 100%;
 
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .orderPage {
   display: none;
   height: 100%;
   width: 100%;
-  background-color: #171712;
   justify-content: center;
   align-items: center;
 }
@@ -32,9 +32,10 @@ body {
 .img {
   width: 100%;
   height: 100%;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   border-radius: 50%;
   transition: ease-in-out 0.3s;
@@ -46,9 +47,14 @@ body {
 
   transition: ease-in-out 0.3s;
 }
+.Discription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .content {
   height: 100%;
-  color: #706233;
+  color: #f4bf96;
 }
 .ct {
   padding: 50px;
@@ -61,14 +67,16 @@ body {
   text-align: center;
 }
 button {
+  font-family: title;
+
   height: 50px;
   width: 100px;
 
   margin-left: 5px;
 
   border: none;
-  background-color: #b0926a;
-  color: #fae7c9;
+  background-color: #fcf5ed;
+  color: #f4bf96;
 
   transition: ease-in 0.3s;
 }
@@ -80,8 +88,8 @@ button:hover {
 }
 
 .title {
-  color: #b0926a;
-  height: 30%;
+  color: #fcf5ed;
+  height: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,15 +97,19 @@ button:hover {
 }
 h1 {
   font-size: 75px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: title;
 }
 .priceSector {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .holder {
-  background-color: #61babe;
-  height: 500px;
+  background: rgb(176, 166, 149 / 1);
+  backdrop-filter: blur(20px);
+
+  height: 625px;
   width: 500px;
   border-radius: 25px;
 
@@ -105,11 +117,11 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  box-shadow: 0px 1px 2px #61babe;
+  box-shadow: 0px 1px 6px #b0a695;
   transition: ease-in-out 0.5s;
 }
 .holder:hover {
-  box-shadow: 0px 1px 20px #61babe;
+  box-shadow: 0px 2px 35px #befff7;
 }
 .input {
   height: 34px;
@@ -118,10 +130,10 @@ h1 {
   border-radius: 15px;
   border: #61babe solid 1px;
 
-  background-color: #171717;
-  color: white;
+  background-color: #fcf5ed;
+  color: black;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: cursive;
 }
 .input:focus {
   box-shadow: 0px 1px 20px #171717;
@@ -183,6 +195,16 @@ select {
   justify-content: center;
   align-items: center;
 }
+.Order-Titles {
+  font-family: input;
+  color: #ffbb5c;
+}
+.contact-- {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 /* Styles for screens with a maximum width of 600px (typical mobile device width) */
 @media only screen and (max-width: 900px) {
   .content-1 {
@@ -199,8 +221,10 @@ select {
     margin-left: 20px;
     margin-right: 20px;
 
-    font-family: cursive;
-    font-size: large;
+    height: 20%;
+
+    font-family: side;
+    font-size: x-large;
   }
   .img {
     height: 50%;
@@ -239,23 +263,36 @@ select {
     width: 30px;
     height: 30px;
   }
-  .orderPage {
-    background-color: #171717;
-  }
   .MainPage {
     flex-direction: column;
   }
   .title {
-    height: 20%;
+    height: 10%;
     font-size: 40px;
   }
   .priceSector {
     flex-direction: flex;
+
+    color: #ffbb5c;
+    font-family: side;
+    font-size: x-large;
+  }
+  .content-1 {
   }
   .holder {
-    height: 300px;
+    height: 625px;
     width: 300px;
-    border-radius: 15px;
+    border-radius: 25px;
+
+    background: transparent;
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 1px 2px #b0a695;
+    transition: ease-in-out 0.5s;
   }
   .orderbtn {
     flex-direction: column;
@@ -263,21 +300,10 @@ select {
   button {
     height: 40px;
     width: 80px;
-    font-size: 14px;
     margin-left: 2px;
-  }
-  .holder {
-    background-color: #61babe;
-    height: 525px;
-    width: 350px;
-    border-radius: 25px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    box-shadow: 0px 1px 2px #61babe;
-    transition: ease-in-out 0.5s;
+    font-family: title;
+    font-size: 25px;
   }
 }
 
@@ -298,5 +324,20 @@ select {
   }
 }
 .FadeOut {
-  animation: fadeOut 1s ease-in-out;
+  animation: fadeOut 0.5s ease-in-out;
+}
+.FadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@font-face {
+  font-family: title;
+  src: url(./fonts/jonathan_hetegral/Jonathan\ Hetegral.otf);
+}
+@font-face {
+  font-family: side;
+  src: url(./fonts/bailenson/Bailenson.ttf);
+}
+@font-face {
+  font-family: input;
+  src: url(./fonts/gnarly_bone/GnarlyBone_PERSONAL_USE_ONLY.otf);
 }

@@ -5,18 +5,24 @@ let body = document.getElementById("body");
 document.getElementById("btn-order").onclick = function () {
   MainPage.classList.add("FadeOut");
   OrderPage.classList.remove("FadeOut");
+
+  OrderPage.classList.add("FadeIn");
+  MainPage.classList.remove("FadeIn");
   setTimeout(function () {
     OrderPage.style.display = "flex";
     MainPage.style.display = "none";
-  }, 1000);
+  }, 495);
 };
 document.getElementById("back_1").onclick = function () {
   MainPage.classList.remove("FadeOut");
   OrderPage.classList.add("FadeOut");
+
+  MainPage.classList.add("FadeIn");
+  OrderPage.classList.remove("FadeIn");
   setTimeout(function () {
     OrderPage.style.display = "none";
     MainPage.style.display = "flex";
-  }, 1000);
+  }, 500);
 };
 
 // Get all radio buttons with name "gender"
@@ -40,33 +46,33 @@ myForm.addEventListener("submit", function (event) {
   event.preventDefault(); // prevent page from reloading
   // code to execute when form is submitted
   try {
-    const product_name = document.getElementById("Title").innerHTML;
     const name = document.getElementById("Name").value;
     const Email = document.getElementById("Email").value;
     const tel = document.getElementById("P-number").value;
+    const Wilaya = document.getElementById("W-Adress").value;
+    const Street = document.getElementById("S-Adress").value;
     const Quantitys = document.getElementById("count");
     const Quantity = Quantitys.value;
 
-    if (product_color == "") {
-      alert("Please enter your data");
-    } else {
-      let sendToYounes = {
-        name: name,
-        from_name: name,
-        email_id: Email,
-        product_name: product_name,
-        product_color: product_color,
-        tel: "+213 " + tel,
-        Quantity: Quantity,
-      };
-      emailjs.send("service_tbwherh", "template_gpwghsv", sendToYounes);
-      console.log(sendToYounes);
-    }
+    let sendToYounes = {
+      name: name,
+      from_name: name,
+      email_id: Email,
+      Wilaya: Wilaya,
+      Street: Street,
+      tel: "+213 " + tel,
+      Quantity: Quantity,
+    };
+    emailjs.send("service_tbwherh", "template_gpwghsv", sendToYounes);
+    console.log(sendToYounes);
+
     console.log("Form submitted!");
     alert("Order submitted!");
   } catch (error) {
     console.log(error);
-    alert("something went wrong, please try again");
+    alert(
+      "something went wrong, please try again or contact this number 0781 43 30 88"
+    );
   }
 });
 document.getElementById("btn-order2").onclick = function () {};
