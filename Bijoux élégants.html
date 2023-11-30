@@ -1,117 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Bijoux élégants</title>
-  </head>
-  <body id="body">
-    <div class="MainPage" id="MainPage">
-      <div class="content">
-        <div class="title">
-          <!-- titre -->
-          <h1 class="Title" id="Title">Bijoux élégants</h1>
-        </div>
-        <div class="Discription">
-          <!-- el info ta3o -->
-          <h3>“Shine and highlight your beauty using the best jewelry.”</h3>
-        </div>
-        <div class="mid">
-          <div id="img-holder" class="img">
-            <img
-              src="./img/377303020_1063028231784292_9155526650930695849_n.jpg"
-              alt="Name"
-              class="image"
-            />
-          </div>
-          <div class="content-1">
-            <div class="priceSector">
-              <h2 class="price">Price :</h2>
-              <h2 style="text-decoration: line-through">4200</h2>
-              <!-- el prix -->
-              <h2 id="price">/3600da</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Bijoux élégants</title>
+    </head>
+    <body id="body">
+        <div class="MainPage" id="MainPage">
+            <div class="content">
+                <div class="title">
+                    <!-- titre -->
+                    <h1 class="Title" id="Title">Bijoux élégants</h1>
+                </div>
+                <div class="Discription">
+                    <!-- el info ta3o -->
+                    <h3
+                        >“Shine and highlight your beauty using the best
+                        jewelry.”</h3
+                    >
+                </div>
+                <div class="mid">
+                    <div id="img-holder" class="img">
+                        <img
+                            src="./img/377303020_1063028231784292_9155526650930695849_n.jpg"
+                            alt="Name"
+                            class="image" />
+                    </div>
+                    <div class="content-1">
+                        <div class="priceSector">
+                            <h2 class="price">Price :</h2>
+                            <h2 style="text-decoration: line-through">4200</h2>
+                            <!-- el prix -->
+                            <h2 id="price">/3600da</h2>
+                        </div>
+                    </div>
+                    <div class="ct">
+                        <div class="order">
+                            <button id="btn-order">Order</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="ct">
-            <div class="order">
-              <button id="btn-order">Order</button>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="orderPage" id="orderPage">
-      <div class="holder">
-        <div class="finalHolder">
-          <form id="myForm">
-            <h3 class="Order-Titles">Full Name</h3>
-            <input
-              type="text"
-              id="Name"
-              placeholder="Your Name "
-              class="input"
-              minlength="2"
-              required
-            />
+        <div class="orderPage" id="orderPage">
+            <div class="holder">
+                <div class="finalHolder">
+                    <form id="myForm">
+                        <h3 class="Order-Titles">Full Name</h3>
+                        <input
+                            type="text"
+                            id="Name"
+                            placeholder="Your Name "
+                            class="input"
+                            minlength="2"
+                            required />
 
-            <h3 class="Order-Titles">Email</h3>
-            <input
-              type="email"
-              id="Email"
-              placeholder="Your Email "
-              class="input"
-              minlength="4"
-              required
-            />
+                        <h3 class="Order-Titles">Email</h3>
+                        <input
+                            type="email"
+                            id="Email"
+                            placeholder="Your Email "
+                            class="input"
+                            minlength="4"
+                            required />
 
-            <h3 class="Order-Titles">Phone Number</h3>
-            <input
-              type="tel"
-              id="P-number"
-              class="input"
-              placeholder="Your Phone Number"
-              pattern="[0-9]{10}"
-              required
-            />
+                        <h3 class="Order-Titles">Phone Number</h3>
+                        <input
+                            type="tel"
+                            id="P-number"
+                            class="input"
+                            placeholder="Your Phone Number"
+                            pattern="[0-9]{10}"
+                            required />
 
-            <h3 class="Order-Titles">Wilaya</h3>
-            <input
-              type="text"
-              id="W-Adress"
-              class="input"
-              placeholder="Your Wilaya"
-              autocomplete="address-level1"
-              required
-            />
-            <h3 class="Order-Titles">Street</h3>
-            <input
-              type="text"
-              id="S-Adress"
-              class="input"
-              placeholder="Your Street"
-              autocomplete="street-address"
-              required
-            />
+                        <h3 class="Order-Titles">Wilaya</h3>
+                        <input
+                            type="text"
+                            id="W-Adress"
+                            class="input"
+                            placeholder="Your Wilaya"
+                            autocomplete="address-level1"
+                            required />
+                        <h3 class="Order-Titles">City</h3>
+                        <input
+                            type="text"
+                            id="C-Adress"
+                            class="input"
+                            placeholder="Your City"
+                            autocomplete="address-level2"
+                            required />
+                        <h3 class="Order-Titles">Street</h3>
+                        <input
+                            type="text"
+                            id="S-Adress"
+                            class="input"
+                            placeholder="Your Street"
+                            autocomplete="street-address"
+                            required />
+                        <h3 class="Order-Titles">Product Code</h3>
+                        <input
+                            type="number"
+                            id="P-code"
+                            class="input"
+                            placeholder="Enter Product Code"
+                            maxlength="4"
+                            required />
 
-            <div class="selc">
-              <h3 class="Order-Titles">Enter Quantity</h3>
+                        <div class="selc">
+                            <h3 class="Order-Titles">Enter Quantity</h3>
 
-              <select
-                name="count"
-                id="count"
-                title="Select count
-                        "
-              >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-            <!-- <div class="colors">
+                            <select
+                                name="count"
+                                id="count"
+                                title="Select count
+                        ">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <!-- <div class="colors">
               <input
                 name="colors"
                 type="radio"
@@ -130,23 +142,22 @@
               />
             </div> -->
 
-            <div class="orderbtn">
-              <button id="btn-order2" type="submit">Order</button>
-              <button id="back_1" type="button">Back</button>
+                        <div class="orderbtn">
+                            <button id="btn-order2" type="submit">Order</button>
+                            <!-- <button id="back_1" type="button">Back</button> -->
+                        </div>
+                    </form>
+                </div>
             </div>
-          </form>
         </div>
-      </div>
-    </div>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("L1SGz6CRiBIdULOUB");
-      })();
-    </script>
-    <script src="index.js"></script>
-  </body>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init('L1SGz6CRiBIdULOUB');
+            })();
+        </script>
+        <script src="index.js"></script>
+    </body>
 </html>
